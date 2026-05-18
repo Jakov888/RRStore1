@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background: black;
+  border-bottom: 1px solid gold;
+}
+
+.logo {
+  color: gold;
+}
+
+.autor {
+  color: #aaa;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+.page {
+  flex: 1;
+  padding: 50px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero h1 {
+  font-size: 55px;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form input {
+  padding: 12px;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+}
+
+.form button {
+  padding: 12px 20px;
+  border: none;
+  background: gold;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  transform: scale(1.05);
+}
+
+.toast {
+  margin-top: 20px;
+  background: gold;
+  color: black;
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.products,
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card,
+.category-card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  border: 1px solid #333;
+}
+
+.card:hover,
+.category-card:hover {
+  transform: translateY(-10px);
+  border-color: gold;
+}
+
+.card img,
+.category-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card h2,
+.category-card h2 {
+  padding: 15px;
+}
+
+.card p,
+.category-card p {
+  padding: 0 15px 15px;
+  color: #bbb;
+}
+
+.card button {
+  margin: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: gold;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  background: gold;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.footer {
+  background: black;
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid gold;
+}
+
+.socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials a {
+  color: gold;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.login-form {
+  display: flex;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 140px;
+}
+
+.login-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: gold;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  transform: scale(1.05);
+}
+
+.header-toast {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: gold;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  z-index: 1000;
+  animation: fade 0.3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
