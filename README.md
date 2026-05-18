@@ -1,2 +1,2 @@
-# RRStore1
-100 pokusaj
+# RRStore
+Nadam se da ce ovo raditi
